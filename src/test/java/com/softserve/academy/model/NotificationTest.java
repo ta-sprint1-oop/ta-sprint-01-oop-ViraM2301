@@ -20,6 +20,10 @@ class NotificationTest {
     private static final String VALID_TOKEN = "device-token-unique-12345";
     private static final String VALID_SENDER = "noreply@softserve.ua";
 
+    public NotificationStatus statusPending = NotificationStatus.PENDING;
+    public NotificationStatus statusSent = NotificationStatus.SENT;
+    public NotificationStatus statusFailed = NotificationStatus.FAILED;
+
     @Test
     @DisplayName("Test EmailNotification full flow and logic")
     void testEmailNotification() throws NotDeliverableException {
